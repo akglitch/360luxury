@@ -342,8 +342,8 @@ header {
   background: var(--modal-bg);
   border: 1px solid var(--border-gold);
   border-radius: 32px;
-  width: 90%;
-  max-width: 550px;
+  width: 100%;
+  max-width: 650px;
   padding: 3rem;
   position: relative;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);

@@ -6,7 +6,7 @@ import { InventoryTable } from '../components/InventoryTable';
 import { MonthYearSelector } from '../components/MonthYearSelector';
 import { AddItemModal } from '../components/AddItemModal';
 import { ViewMode } from '../types/inventory';
-
+import Image from 'next/image';
 export default function Home() {
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(new Date().getMonth() + 1);
@@ -54,8 +54,8 @@ export default function Home() {
     return (
       <div className="main-container">
         <div style={{ textAlign: 'center', marginTop: '10rem' }}>
-          <div className="logo" style={{ marginBottom: '2rem' }}>360_luxury</div>
-          <p style={{ color: 'var(--fg-muted)', letterSpacing: '0.2em' }}>PREPARING COLLECTION...</p>
+          <div className="logo" style={{ marginBottom: '2rem' }}><Image src="/logo.png" alt="360_luxury Logo" width={100} height={80} /></div>
+          <p style={{ color: 'var(--fg-muted)', letterSpacing: '0.2em' }}>360 LUXURY</p>
         </div>
       </div>
     );
@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <main className="main-container">
       <div className="print-header">
-        <h1>360_luxury Inventory Report</h1>
+       <Image src="/logo.png" alt="360_luxury Logo" width={100} height={80} />
         <p>{viewMode === 'monthly' ? `${monthNames[month - 1]} ${year}` : `Yearly Report ${year}`}</p>
       </div>
 
